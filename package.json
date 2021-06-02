@@ -8,6 +8,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "faunadb": "^4.3.0",
     "icons": "^1.0.0",
     "next": "10.2.3",
     "next-auth": "^3.24.1",
