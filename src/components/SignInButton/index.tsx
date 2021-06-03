@@ -9,16 +9,25 @@ export const SignInButton = () => {
   const [session] = useSession()
   // console.log(session)
 
-  return (
+  return session ? (
     <button 
       className={styles.signInButton} 
-      onClick={() => session ? signOut() : signIn('github')} 
+      onClick={() => signOut()} 
     >
-      <FaGithub color={session ? '#04d361' : '#eba417'}/>
+      <FaGithub color='#04d361'/>
 
-      {session ? session.user.name : 'Sign in with Github' }
+      {session.user.name}
       
-      {session && <FiX /> }
+      <FiX />
+    </button>
+  ) : (
+    <button 
+      className={styles.signInButton} 
+      onClick={() => signIn('github')} 
+    >
+      <FaGithub color='#eba417'/>
+
+      <span>Sign In with GitHub</span>
     </button>
   )
 }
