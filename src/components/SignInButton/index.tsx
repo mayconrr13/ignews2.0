@@ -15,7 +15,9 @@ export const SignInButton = () => {
       onClick={() => session ? signOut() : signIn('github')} 
     >
       <FaGithub color={session ? '#04d361' : '#eba417'}/>
+
       {session ? session.user.name : 'Sign in with Github' }
+      
       {session && <FiX /> }
     </button>
   )
