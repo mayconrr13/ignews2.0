@@ -20,9 +20,7 @@ interface PostsProps {
 }
 
 
-export default function Posts({ posts }:PostsProps) {
-  console.log(posts)
-  
+export default function Posts({ posts }:PostsProps) {  
   return (
     <>
       <Head>
